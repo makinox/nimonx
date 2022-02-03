@@ -1,7 +1,12 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
 
-const Home: NextPage = () => {
+import Description from '../containers/Description/Description';
+import Navbar from '../components/Navbar/Navbar';
+import Footer from '../components/Footer/Footer';
+import Hero from '../containers/Hero/Hero';
+import Show from '../containers/Show/Show';
+
+export default function Home() {
   return (
     <div>
       <Head>
@@ -10,15 +15,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navbar />
+
       <main>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <Hero />
+        <Description />
+        <Show />
       </main>
 
-      <footer></footer>
+      <Footer />
     </div>
   );
-};
-
-export default Home;
+}
