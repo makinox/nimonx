@@ -1,4 +1,5 @@
 import { FluidContainer } from '@makinox/makinox-ui';
+import Lemon from '../../components/Lemon/Lemon';
 
 import { heroBackgroundContainer, heroBackgroundPath, heroBackgroundVector, heroSection } from './Hero.style';
 
@@ -16,14 +17,13 @@ const HeroBackground = () => (
 export default function Hero() {
   return (
     <div className={heroSection()} style={{ position: 'relative' }}>
-      <div className={`flex justify-between items-center ${FluidContainer()}`} style={{ height: 500 }}>
+      <div className={`flex justify-between items-center ${FluidContainer()}`}>
         <HeroBackground />
         <article>
           <h1>Titulo de limons</h1>
         </article>
         <article>
-          <span>3d lemon</span>
-          {/* <Limon /> */}
+          <Lemon />
         </article>
       </div>
     </div>
