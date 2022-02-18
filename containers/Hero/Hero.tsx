@@ -1,5 +1,10 @@
 import { FluidContainer } from '@makinox/makinox-ui';
-import Lemon from '../../components/Lemon/Lemon';
+import dynamic from 'next/dynamic';
+
+const Lemon = dynamic(() => import('../../components/Lemon/Lemon'), {
+  ssr: false,
+  loading: () => <div>...</div>,
+});
 
 import { heroBackgroundContainer, heroBackgroundPath, heroBackgroundVector, heroSection } from './Hero.style';
 
@@ -17,7 +22,7 @@ const HeroBackground = () => (
 export default function Hero() {
   return (
     <div className={heroSection()} style={{ position: 'relative' }}>
-      <div className={`flex justify-between items-center ${FluidContainer()}`}>
+      <div className={`flex justify-evenly items-center ${FluidContainer()}`}>
         <HeroBackground />
         <article>
           <h1>Titulo de limons</h1>
