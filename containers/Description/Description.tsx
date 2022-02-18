@@ -1,9 +1,14 @@
 import { Card } from '@makinox/makinox-ui';
+import NextImage from 'next/image';
+import { DescriptionSection } from './Description.styles';
 
 export default function Description() {
   return (
-    <section className="flex justify-center">
+    <section className={`flex justify-evenly flex-wrap ${DescriptionSection()}`}>
       <article className={Card()}>
+        <div className="card-media">
+          <NextImage src="/images/image-market.png" alt="Makinox open sea" width={400} height={170} objectFit="cover" />
+        </div>
         <div className="card-header">
           <h6 className="headline6">Compra el nft en open sea</h6>
         </div>
@@ -13,6 +18,9 @@ export default function Description() {
       </article>
 
       <article className={Card()}>
+        <div className="card-media">
+          <NextImage src="/images/image-market.png" alt="Makinox open sea" width={400} height={170} objectFit="cover" />
+        </div>
         <div className="card-header">
           <h6 className="headline6">Interactua con tu nft en vivo</h6>
         </div>
@@ -22,6 +30,9 @@ export default function Description() {
       </article>
 
       <article className={Card()}>
+        <div className="card-media">
+          <NextImage src="/images/image-market.png" alt="Makinox open sea" width={400} height={170} objectFit="cover" />
+        </div>
         <div className="card-header">
           <h6 className="headline6">Pide tu nft para que llegue a tu casa</h6>
         </div>

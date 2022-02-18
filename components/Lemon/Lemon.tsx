@@ -11,8 +11,6 @@ function Base() {
   }: any = useGLTF('/limon.glb');
 
   useFrame(() => (meshRef.current.rotation.y += 0.002));
-  // useHelper(mesh, BoxHelper, 'cyan');
-  console.log({ geometry, material });
 
   return (
     <>
