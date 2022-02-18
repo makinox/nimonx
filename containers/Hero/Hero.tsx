@@ -28,7 +28,7 @@ export default function Hero() {
           <h1>Titulo de limons</h1>
         </article>
         <article>
-          <Lemon />
+          <Lemon type="base" />
         </article>
       </div>
     </div>
