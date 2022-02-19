@@ -1,8 +1,12 @@
 import { css } from '@stitches/core';
 
 export const ShowSection = css({
-  '&  article': {
+  '& article': {
     margin: '10px 0',
+  },
+
+  '& .card-bottom': {
+    paddingTop: ' 0',
   },
 
   '& > div:last-of-type': {

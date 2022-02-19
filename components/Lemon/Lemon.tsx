@@ -31,7 +31,7 @@ function Planet({ type, color = 'white', scale = 1 }: { type: 'base' | 'solid'; 
           <>
             <pointLight position={[-10, 9, 10]} color="rgb(243, 199, 83)" intensity={0.5} />
             <pointLight position={[10, -9, -5]} color="rgb(18,235,207)" intensity={1} />
-            <OrbitControls />
+            <OrbitControls enableZoom={false} />
             <Base />
           </>
         );

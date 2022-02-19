@@ -8,6 +8,8 @@ const Lemon = dynamic(() => import('../../components/Lemon/Lemon'), {
   loading: () => <div>...</div>,
 });
 
+const COLORS = ['blue', 'red', 'green', 'black', 'brown', 'blueviolet', 'coral', 'indigo'];
+
 export default function Show() {
   return (
     <section className={ShowSection()}>
@@ -15,86 +17,18 @@ export default function Show() {
         <h2>En esta coleccion</h2>
       </div>
       <div className="flex justify-evenly flex-wrap">
-        <article className={Card()}>
-          <div className="card-media">
-            <Lemon type="solid" scale={1.5} color="blue" />
-          </div>
-          <div className="card-bottom">
-            <button className={ButtonText()} onClick={() => window.open('https://jesusbossa.dev', '_blank')} key={`button makinox opensea`}>
-              comprar
-            </button>
-          </div>
-        </article>
-        <article className={Card()}>
-          <div className="card-media">
-            <Lemon type="solid" scale={1.5} color="red" />
-          </div>
-          <div className="card-bottom">
-            <button className={ButtonText()} onClick={() => window.open('https://jesusbossa.dev', '_blank')} key={`button makinox opensea`}>
-              comprar
-            </button>
-          </div>
-        </article>
-        <article className={Card()}>
-          <div className="card-media">
-            <Lemon type="solid" scale={1.5} color="green" />
-          </div>
-          <div className="card-bottom">
-            <button className={ButtonText()} onClick={() => window.open('https://jesusbossa.dev', '_blank')} key={`button makinox opensea`}>
-              comprar
-            </button>
-          </div>
-        </article>
-        <article className={Card()}>
-          <div className="card-media">
-            <Lemon type="solid" scale={1.5} color="black" />
-          </div>
-          <div className="card-bottom">
-            <button className={ButtonText()} onClick={() => window.open('https://jesusbossa.dev', '_blank')} key={`button makinox opensea`}>
-              comprar
-            </button>
-          </div>
-        </article>
-        <article className={Card()}>
-          <div className="card-media">
-            <Lemon type="solid" scale={1.5} color="brown" />
-          </div>
-          <div className="card-bottom">
-            <button className={ButtonText()} onClick={() => window.open('https://jesusbossa.dev', '_blank')} key={`button makinox opensea`}>
-              comprar
-            </button>
-          </div>
-        </article>
-        <article className={Card()}>
-          <div className="card-media">
-            <Lemon type="solid" scale={1.5} color="blueviolet" />
-          </div>
-          <div className="card-bottom">
-            <button className={ButtonText()} onClick={() => window.open('https://jesusbossa.dev', '_blank')} key={`button makinox opensea`}>
-              comprar
-            </button>
-          </div>
-        </article>
-        <article className={Card()}>
-          <div className="card-media">
-            <Lemon type="solid" scale={1.5} color="coral" />
-          </div>
-          <div className="card-bottom">
-            <button className={ButtonText()} onClick={() => window.open('https://jesusbossa.dev', '_blank')} key={`button makinox opensea`}>
-              comprar
-            </button>
-          </div>
-        </article>
-        <article className={Card()}>
-          <div className="card-media">
-            <Lemon type="solid" scale={1.5} color="indigo" />
-          </div>
-          <div className="card-bottom">
-            <button className={ButtonText()} onClick={() => window.open('https://jesusbossa.dev', '_blank')} key={`button makinox opensea`}>
-              comprar
-            </button>
-          </div>
-        </article>
+        {COLORS.map((co) => (
+          <article key={co} className={Card()}>
+            <div className="card-media">
+              <Lemon type="solid" scale={1.5} color={co} />
+            </div>
+            <div className="card-bottom flex justify-center">
+              <button className={ButtonText()} onClick={() => window.open('https://jesusbossa.dev', '_blank')} key={`button makinox opensea`}>
+                comprar
+              </button>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );

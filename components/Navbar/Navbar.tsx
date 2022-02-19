@@ -10,11 +10,7 @@ export default function Navbar() {
         <div className="flex items-center">
           <span>Limons</span>
         </div>
-        <div>
-          <Link href="/">root</Link>
-          <Link href="/login">login</Link>
-          <Link href="#contact">contact</Link>
-        </div>
+
         <div>
           <a href="https://jesusbossa.dev" target="_blank" rel="noreferrer">
             <FaHome />
