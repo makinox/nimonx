@@ -20,15 +20,17 @@ const HeroBackground = () => (
 );
 
 export default function Hero() {
+  const windowWidth = typeof window !== 'undefined' && window.innerWidth;
+
   return (
-    <div className={heroSection()} style={{ position: 'relative' }}>
-      <div className={`flex justify-evenly items-center ${FluidContainer()}`}>
+    <div className={heroSection({ mode: windowWidth > 749 ? 'lg' : 'sm' })} style={{ position: 'relative' }}>
+      <div className={`flex justify-evenly items-center flex-wrap ${FluidContainer()}`}>
         <HeroBackground />
         <article>
-          <h1>Titulo de limons</h1>
+          <h1>Descubre el nuevo NFT con el que puedes interactuar en la vida real</h1>
         </article>
         <article>
-          <Lemon type="base" />
+          <Lemon type="base" scale={1.3} />
         </article>
       </div>
     </div>

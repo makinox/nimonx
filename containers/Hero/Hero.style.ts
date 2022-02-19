@@ -7,9 +7,34 @@ export const heroSection = css({
     height: '600px',
   },
 
+  '& article:first-of-type': {
+    width: '350px',
+    fontSize: 30,
+    color: 'White',
+  },
+
   '& article:last-of-type': {
-    height: '800px',
+    height: '600px',
     width: '400px',
+  },
+
+  variants: {
+    mode: {
+      lg: {
+        '& > div': {
+          height: '600px',
+        },
+      },
+      sm: {
+        '& > div': {
+          height: '850px',
+        },
+      },
+    },
+  },
+
+  defaultVariants: {
+    mode: 'lg',
   },
 });
 
