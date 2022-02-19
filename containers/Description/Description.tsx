@@ -19,7 +19,7 @@ export default function Description() {
 
       <article className={Card()}>
         <div className="card-media">
-          <NextImage src="/images/image-market.png" alt="Makinox open sea" width={400} height={170} objectFit="cover" />
+          <NextImage src="/images/image-software.jpeg" alt="Makinox open sea" width={400} height={170} objectFit="cover" />
         </div>
         <div className="card-header">
           <h6 className="headline6">Interactua con tu nft en vivo</h6>
@@ -31,10 +31,10 @@ export default function Description() {
 
       <article className={Card()}>
         <div className="card-media">
-          <NextImage src="/images/image-market.png" alt="Makinox open sea" width={400} height={170} objectFit="cover" />
+          <NextImage src="/images/image-package.jpeg" alt="Makinox open sea" width={400} height={170} objectFit="cover" />
         </div>
         <div className="card-header">
-          <h6 className="headline6">Pide tu nft para que llegue a tu casa</h6>
+          <h6 className="headline6">Pide que llegue tu nft a tu casa</h6>
         </div>
         <div className="card-body">
           <p className="body2">Pide tu nft para que llegue a tu casa</p>
