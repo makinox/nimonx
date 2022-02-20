@@ -1,4 +1,4 @@
-import { ButtonText, Card } from '@makinox/makinox-ui';
+import { ButtonText, Card, FluidContainer } from '@makinox/makinox-ui';
 import { useTranslation } from 'next-i18next';
 import dynamic from 'next/dynamic';
 
@@ -14,7 +14,7 @@ const COLORS = ['blue', 'red', 'green', 'black', 'brown', 'blueviolet', 'coral',
 export default function Show() {
   const { t } = useTranslation('common');
   return (
-    <section className={ShowSection()}>
+    <section className={`${ShowSection()} ${FluidContainer()}`}>
       <div className="flex justify-center">
         <h2>{t('PRODUCT-TITLE')}</h2>
       </div>
