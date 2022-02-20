@@ -1,4 +1,5 @@
 import { ButtonText, Card } from '@makinox/makinox-ui';
+import { useTranslation } from 'next-i18next';
 import dynamic from 'next/dynamic';
 
 import { ShowSection } from './Show.styles';
@@ -11,10 +12,11 @@ const Lemon = dynamic(() => import('../../components/Lemon/Lemon'), {
 const COLORS = ['blue', 'red', 'green', 'black', 'brown', 'blueviolet', 'coral', 'indigo'];
 
 export default function Show() {
+  const { t } = useTranslation('common');
   return (
     <section className={ShowSection()}>
       <div className="flex justify-center">
-        <h2>En esta coleccion</h2>
+        <h2>{t('PRODUCT-TITLE')}</h2>
       </div>
       <div className="flex justify-evenly flex-wrap">
         {COLORS.map((co) => (
@@ -24,7 +26,7 @@ export default function Show() {
             </div>
             <div className="card-bottom flex justify-center">
               <button className={ButtonText()} onClick={() => window.open('https://jesusbossa.dev', '_blank')} key={`button makinox opensea`}>
-                comprar
+                {t('PRODUCT-BUY')}
               </button>
             </div>
           </article>

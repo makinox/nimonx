@@ -1,4 +1,5 @@
 import { FluidContainer } from '@makinox/makinox-ui';
+import { useTranslation } from 'next-i18next';
 import dynamic from 'next/dynamic';
 
 const Lemon = dynamic(() => import('../../components/Lemon/Lemon'), {
@@ -21,13 +22,14 @@ const HeroBackground = () => (
 
 export default function Hero() {
   const windowWidth = typeof window !== 'undefined' && window.innerWidth;
+  const { t } = useTranslation('common');
 
   return (
     <div className={heroSection({ mode: windowWidth > 749 ? 'lg' : 'sm' })} style={{ position: 'relative' }}>
       <div className={`flex justify-evenly items-center flex-wrap ${FluidContainer()}`}>
         <HeroBackground />
         <article>
-          <h1>Descubre el nuevo NFT con el que puedes interactuar en la vida real</h1>
+          <h1>{t('HEAD-DESCRIPTION')}</h1>
         </article>
         <article>
           <Lemon type="base" scale={1.3} />

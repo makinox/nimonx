@@ -1,14 +1,16 @@
 import { FaTwitterSquare, FaLinkedin, FaHome } from 'react-icons/fa';
 import { FluidContainer, TopBar } from '@makinox/makinox-ui';
 import { NavbarSection } from './Navbar.styles';
-import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 export default function Navbar() {
+  const { t } = useTranslation('common');
+
   return (
     <header className={TopBar()}>
       <nav className={`flex justify-between items-center ${FluidContainer()} ${NavbarSection()}`}>
         <div className="flex items-center">
-          <span>Limons</span>
+          <span>{t('HEAD-TITLE')}</span>
         </div>
 
         <div>
