@@ -7,8 +7,8 @@ export default function Navbar() {
   const { t } = useTranslation('common');
 
   return (
-    <header className={TopBar()}>
-      <nav className={`flex justify-between items-center ${FluidContainer()} ${NavbarSection()}`}>
+    <header className={`${TopBar()} ${NavbarSection()}`}>
+      <nav className={`flex justify-between items-center ${FluidContainer()}`}>
         <div className="flex items-center">
           <span>{t('HEAD-TITLE')}</span>
         </div>
